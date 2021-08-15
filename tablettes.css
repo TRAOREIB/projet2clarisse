@@ -1,0 +1,422 @@
+/*---------------------Police: directives FontFace--------------------*/
+
+@font-face {
+	font-family: "Raleway";
+	src: url("static/Raleway-Thin.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-ExtraLight.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-Light.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-Regular.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-Medium.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-SemiBold.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-Bold.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-ExtraBold.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-Black.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-ThinItalic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-ExtraLightItalic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-LightItalic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-Italic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-MediumItalic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-SemiBoldItalic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-BoldItalic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-ExtraBoldItalic.ttf") format("truetype"),
+		  url("Raleway/static/Raleway-BlackItalic.ttf)") format("truetype");
+}
+
+
+/*--------------------------Règles générales---------------------------*/
+
+body/*Sur toute la page*/
+{
+	font-family: "Raleway", sans-serif;/*police Raleway, sans empatements*/
+}
+
+h1/*titres principaux des sections*/
+{
+	font-size: 21px;/*taille de la police*/
+	font-family: "Raleway-ExtraBold", sans-serif;/*police Raleway plus grasse, sans empatement*/
+	font-weight: bold;/*en gras*/
+}
+
+h2/*Sous-titres*/
+{
+	font-size: 18px;/*taille de la police*/
+	font-family: "Raleway-ExtraBold", sans-serif;/*police Raleway plus grasse, sans empatement*/
+	font-weight: bold;/*en gras*/
+}
+
+h3/*Titres de photos*/
+{
+	font-size: 16px;/*taille de la police*/
+	font-family: "Raleway-ExtraBold", sans-serif;/*police Raleway plus grasse, sans empatement*/
+	font-weight: bold;/*en gras*/
+	line-height: 6px;/*espace entre les deux lignes*/
+}
+
+p/*texte de base*/
+{
+	font-size: 16px;/*taille de la police*/
+}
+
+a/*tous les liens cliquables de la page*/
+{
+	text-decoration: none;/*perd soulignement défini par défaut*/
+	color: black;/*perd couleur définie bleu par défaut*/
+}
+
+
+
+
+/*-------------------------------En-tête----------------------------------*/
+
+
+header
+{
+	margin: 32px 21px 0 20px;/*marges ext*/
+	width: 375px;/*largeur*/
+	height: 100px;/*hauteur*/
+}	
+
+nav/*=header*/
+{
+	flex-wrap: wrap; /*disposition des éléments flexibles*/
+}
+
+.reservia/*logo*/
+{
+	order: 1;
+}
+
+.menu/*"hébergements" et "activités"*/
+{
+	justify-content: space-around;/*espace entre et autour des éléments*/
+	width: 375px;/*largeur*/
+	margin-left: -20px;/*marge ext gauche annulée*/
+	order: 3;
+}
+
+#menuhebergements, #menuactivites
+{
+	width: 187px;/*largeur bloc texte*/
+	text-align: center;/*texte centré*/
+	border-bottom: 3px solid;/*souligné*/
+	border-color: #F2F2F2;/*en gris*/
+	padding-bottom: 13px;/*espace entre texte et soulignement*/
+}
+
+#menuhebergements:active, #menuactivites:active
+{
+	color: #0065FC;/*texte en bleu*/;
+	border-color: #0065FC;/*ligne en bleu*/
+}
+
+#sinscrire
+{
+	margin-right: 21px;/*marge ext droite*/
+	margin-left: 0;/*marge ext gauche annulée*/
+	order: 2;
+}
+
+/*--------------------------Barre de recherche ---------------------------*/
+
+.vacancesdereve/*titre barre de recherche*/
+{
+	width: 292px;/*largeur bloc*/
+	height: 79px;/*hauteur cadre*/
+	margin-left: 20px;/*marge ext gauche du bloc*/
+	margin-top: 36px;/*marge ext entre ce bloc et le bloc header*/
+	line-height: 25px;/*ajustement visuel*/
+}
+
+.barrederecherche
+{
+	width: 334px;/*largeur bloc*/
+	margin-top: 35px;/*marge ext haute (entre barre de recherche et titre)*/
+	margin-left: 21px;/*marge ext gauche (entre barre de recherche et bord de la page)*/
+}
+
+section input/*bloc de saisie*/
+{
+	width: 230px;/*largeur bloc*/
+}
+
+.barrederecherche button span/*bouton rechercher avec texte*/
+{
+	display: none;/*diparaît*/
+}
+
+i.fa-search/*bouton rechercher avec icon*/
+{
+	display: inline-block;/*visible*/
+	color: white;/*couleur texte*/
+	background-color: #0065FC;/*couleur fond bleu*/
+	width: 17px;/*largeur bloc*/
+	height: 17px;/*hauteur bloc*/
+	border-radius: 15px;/*coins arrondis*/
+	border: none;
+	border: 1px solid #0065FC;/*contour ligne continue épaisseure 1px bleue clair*/
+	text-align: center;
+}
+
+/*-----------------------------------Filtres---------------------------------*/
+.blocfiltre/*bloc filtres*/
+{
+	display: inline-block;
+}
+
+.titreblocfiltres
+{
+	margin-top: 36px;/*marge ext haute*/
+	margin-left: 23px;/*marge ext gauche*/
+	margin-bottom: -10px;/*ajustement visuel*/
+}
+
+.filtres/*bloc filtres*/
+{
+	width: 339px;/*largeur + ajustement visuel*/
+	height: 209px;/*hauteur*/
+	margin: 18px 27px 0 20px;/*marge ext + ajustement visuel*/
+	flex-wrap: wrap;/*élément va à la ligne lorsque plus de place*/
+}
+
+.filtre/*intitulés filtres + contour gris*/
+{
+	padding-left: 40px;/*ajustement visuel*/
+}
+
+.filtre h2/*intitulés filtres*/
+{
+	margin-left: 60px;/*marge est gauche (entre bord contour et gris et intitulé)*/
+	margin-right: 30px;/*ajustement visuel*/
+}
+
+#economique/*bloc filtre économique*/
+{
+	width: 177px;/*largeur*/
+}
+
+#familial/*bloc filtre familial*/
+{
+	margin-left: 11px;/*marge ext gauche (entre filtre eco et familial)*/
+	width: 141px;/*largeur*/
+}
+
+#romantique/*bloc filtre romantique*/
+{
+	width: 169px;/*largeur*/
+}
+
+#economique h2, #familial h2, #romantique h2, #animaux h2
+{
+	margin-left: 20px;/*ajustement visuel*/
+	margin-right: 14px;/*marge ext droite*/
+}
+
+#animaux/*bloc filtre animaux autorisés*/
+{
+	width: 220px;/*largeur*/
+}
+
+#animaux h2/*"animaux autorisés"*/
+{
+	width: 162px;/*ajustement visuel*/
+}
+
+.fa-dog/*icon chien*/
+{
+	padding: 15px 12px 14px 12px;/*marges int + ajustement visuel*/
+}
+
+
+/*---------------------------Info------------------------------*/
+
+.infotexte/*icon info + texte*/
+{
+	align-items: baseline;/*éléments flexibles alignés sur la ligne de départ de l'axe vertical*/
+	margin-left: 20px;/*marge ext grauche (entre icon info et bord de la page)*/
+	margin-top: 10px;/*marge ext haut (entre ce bloc et bloc filtres) + ajustement visuel*/
+	height: 41px;/*hauteur*/
+	width: 331px;/*largeur*/
+}
+
+
+
+/*--------------------------------Hébergements----------------------------------*/
+
+.hebergements/*bloc section hébergements (titre + cartes + afficherplus)*/
+{	
+	height: 0;/*pas de fond*/
+	left: 21px;/*positon gauche en fonction du bloc de référence*/top: 580px;/*ajustement visuel*/
+}
+
+#titrehebergements/*titre*/
+{
+	margin-left: 0;/*marge ext gauche (entre bord section et titre)*/
+}
+
+.carteshebergements/*bloc cartes*/
+{
+	margin-top: 19px;/*marge ext haute (entre bloc cartes et titre)*/
+	flex-direction: column;/*éléments à la suite sur une colonne*/
+	flex-wrap: nowrap;/*élément flex en une seule colonne*/
+	margin-left: 0;/*ajustement visuel*/
+	grid-gap: 12px;/*espace entre cartes*/
+}
+
+.cartes/*cartes (photo + description)*/
+{
+	width: 335px;/*largeur carte*/
+}
+
+.photos/*photos d'hébergements*/
+{
+	width: 325px;/*largeur*/
+}
+
+.description/*bloc description de l'hébegement*/
+{
+	line-height: 12px;/*espace entre lignes de texte*/
+}
+
+
+#afficherplus
+{
+	margin-left: 1px;/*marge ext gauche supplémentaire (entre bord bloc hébergements et texte)*/
+}
+
+
+
+
+/*-----------------------------------Populaires----------------------------------*/
+
+
+.populaires/*bloc gris section populaires (titre + cartes)*/
+{
+	width: 375px;/*largeur*/
+	height: 580px;/*hauteur*/
+	border-radius: 0;/*coins pas arrondis*/
+	margin-top: 10px;/*ajustement visuel*/
+}
+
+#titrepopulaire/*bloc titre + icône*/
+{
+	height: 90px;/*hauteur bloc*/
+	width: 334px;/*largeur bloc*/
+	margin: -20px 20px 20px 21px;/*marges ext + ajustement visuel*/
+}
+
+.fa-chart-line/*icon populaire*/
+{
+	width: 21px;/*largeur icône*/
+}
+
+#cartespopulaires/*bloc cartes*/
+{
+	width: 334px;/*largeur*/
+	height: 453px;/*hauteur*/
+	margin: -10px 21px -10px 19px;/*marges ext + ajustement visuel*/
+}
+
+.cartes2/*cartes blanches populaires (photo + desciption + note)*/
+{
+	width: 334px;/*largeur cartes*/
+	margin-top: -15px;/*ajustement visuel*/
+}
+
+.description2/*description photos*/
+{
+	height: 58px;/*hauteur*/
+	margin-left: 21px;/*marge ext gauche (entre photo et description)*/
+}
+
+.note2/*bloc note étoiles*/
+{	
+	display: flex;/*disposition flexbox*/
+	flex-direction: row;/*éléments à la suite sur la même ligne*/
+	justify-items: space-between;/*espace entre chaque éléments*/
+	margin-left: 20px;/*marge ext gauche (entre bord photo et 1ere étoile bloc)*/
+}
+
+
+/*-----------------------------Hébergements et Populaires------------------------------*/
+
+.toushebergements/*bloc section hebergements et populaires*/
+{
+	width: 375px;/*largeur*/
+	height: 1967px;/*hauteur*/
+	flex-direction: column-reverse;/*éléments à la suite sur colonne + ordre éléments inversé)*/
+	margin-left: 0;/*pas de marge ext gauche*/
+}
+
+
+
+
+/*----------------------------------------Activités-----------------------------------------------*/
+
+.titreactivites
+{
+	margin-bottom: 20px;/*marge ext bas*/
+	margin-left: 25px;/*marge ext gauche*/
+}
+
+.cartesactivités/*bloc cartes*/
+{
+	height: 1255px;/*hauteur*/
+	width: 334px;/*largeur*/
+	flex-direction: column;/*éléments à la suite sur une colonne*/
+	margin-top: 21px;/*marge ext haute (entre haut bloc cartes et titre)*/
+	grid-gap: 14px;/*ajustement visuel*/
+}
+
+.grandescartes/*carte vieux port + carte calanques*/
+{
+	margin-left: -25px;/*ajustement visuel*/
+}
+
+.souscarte/*sous bloc carte (pomègues+Frioul et notre-dame+Longchamp)*/
+{
+	margin-left: -10px;/*ajustement visuel*/
+	grid-gap: 0;/*ajustement visuel*/
+}
+
+.grandescartes, #cartepomegues, #cartefrioul, #cartenotredame, #cartelongchamp/*toutes les cartes*/
+{
+	width: 334px;/*largeur*/
+	height: 190px;/*hauteur*/
+}
+
+.grandesphotos, #photopomegues, #photofrioul, #photonotredame, #photolongchamp/*toutes les photos*/
+{
+	width: 334px;/*largeur*/
+	height: 134px;/*hauteur*/
+}
+
+.description3/*descriptions photos activités*/
+{
+	margin: 20px 0 17px 20px;/*marge ext*/
+}
+
+
+/*----------------------------------------Pied de Page-----------------------------------------------*/
+
+footer
+{
+	margin-top: 70px;/*marge ext haute*/
+	width: 375px;/*largeur*/
+}
+
+.pieddepage/*footer int*/
+{
+	padding-top: 25px;/*marge int haute*/
+	padding-bottom: 20px;/*marge int bas*/
+	margin-left: 30px;/*marge ext gauche*/
+	height: 486px;/*hauteur*/
+	width: 375px;/*largeur*/
+	flex-direction: column;/*éléments en colonne*/
+	justify-content: space-around;/*espace autour des éléments*/
+}
+
+ul/*liste d'éléments par partie*/
+{
+	font-size: 17px;/*taille de la police*/
+	margin-top: 20px;/*ajustement visuel*/
+}
